@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css?family=Muli|Open+Sans&display=swap');
+
+* {
+    /* CSS Variables */
+    --base03: #002b36;
+    --base02: #073642;
+    --base01: #586e75;
+    --base00: #657b83;
+    --base0: #839496;
+    --base1: #93a1a1;
+    --base2: #eee8d5;
+    --base3: #fdf6e3;
+    --yellow: #b58900;
+    --orange: #cb4b16;
+    --red: #dc322f;
+    --magenta: #d33682;
+    --violet: #6c71c4;
+    --blue: #268bd2;
+    --cyan: #2aa198;
+    --green: #859900;
+
+    margin: 0;
+    padding: 0;
+
+    color: var(--base03);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+.fas {
+    margin-left: 5px;
+    color: inherit;
+}
+
+body {
+    background-color: var(--base3);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    font-family: 'Muli', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.btn {
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    background: var(--blue);
+    color: var(--base3);
+    font-size: 17px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: var(--base01);
+    cursor: pointer;
+}
+
+.navbar {
+    width: calc(80% - 10px);
+    margin-left: 10%;
+    padding: 5px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stretch-10 {
+    flex-basis: 10%;
+}
+
+.stretch-25 {
+    flex-basis: 25%;
+}
+
+.stretch-50 {
+    flex-basis: 50%;
+}
+
+.stretch-100 {
+    flex-basis: 100%;
+}
+
+.stretch {
+    flex-grow: 1;
+}
+
+.title {
+    margin: 5px;
+
+    font-weight: bolder;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title .muted {
+    margin-left: 8px;
+    font-size: 15px;
+}
+
+.nav-items {
+    display: inline-flex;
+    list-style: none;
+}
+
+.nav-items .item {
+    margin: 5px;
+}
+
+.nav-items .item a {
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.nav-items .active {
+    text-decoration: underline;
+}
+
+.muted {
+    color: var(--base1);
+}
+
+.task {
+    background: var(--base2);
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.priority1, .priority2, .priority3, .priority4 {
+    margin-top: 80px;
+}
+
+
+.priority1::before {
+    position: relative;
+    content: 'Priority 1';
+    margin: -20px;
+    top: -30px;
+}
+
+.priority2::before {
+    position: relative;
+    content: 'Priority 2';
+    margin: -20px;
+    top: -30px;
+}
+
+.priority3::before {
+    position: relative;
+    content: 'Priority 3';
+    margin: -20px;
+    top: -30px;
+}
+
+.priority4::before {
+    position: relative;
+    content: 'No Priority';
+    margin: -20px;
+    top: -30px;
+}
+
+/* Customize the label (the container) */
+.task .task-label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+  width: 100%;
+}
+
+/* Hide the browser's default checkbox */
+.task .task-label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Default Checkbox Styles */
+.task .checkmark {
+  position: absolute;
+  top: 3.5px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: var(--base1) solid 2px;
+  background-color: var(--base0);
+}
+
+/* Checked */
+.task .task-label input:checked ~ .checkmark {
+  background-color: var(--cyan);
+  border-color: var(--blue);
+}
+
+/* Check Icon */
+.task .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show Check Icon */
+.task .task-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.task .task-label .checkmark:after {
+  left: 8.5px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--base3);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.task input[type="text"] {
+    border: none;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    background: var(--base3);
+    width: 100%;
+}
+
+.task #task-due {
+    font-size: 20px;
+}
+
+.task .inline {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 50%;
+}
+
+.task .btn {
+    width: 35%;
+}
+
+.task .alert {
+    background-color: var(--red);
+}
+
+.signin {
+    width: 40%;
+    margin: auto;
+}
+
+.signin form input {
+    padding: 10px;
+    font-size: 20px;
+    background: var(--base2);
+    border: none;
+    border-radius: 10px;
+}
+
+#course-select {
+    margin-bottom: 50px;
+}
+
+#course-select .course {
+    width: 23%;
+    border-radius: 0;
+
+}
+
+#course-select .active {
+    background: black;
+}
+
+.form {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 'email email' 'paswd paswd' 'sign log'
+}
+
+.form .email {
+    grid-area: email;
+}
+
+.form .paswd {
+    grid-area: paswd;
+}
+
+.form .sign {
+    grid-area: sign;
+}
+
+.form .log {
+    grid-area: log;
+}
+
+.dropdown {
+	font-size: 19px;
+	font-family: 'Open Sans', sans-serif;
+	color: #444;
+	box-sizing: border-box;
+	margin: 10px;
+    padding: 5px;
+	border: 1px solid #aaa;
+	border-radius: 10px;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+	background-size: .65em auto, 100%;
+}
