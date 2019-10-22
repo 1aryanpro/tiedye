@@ -20,14 +20,22 @@
             <h1 class="title">Tie Dye <span class="muted">by Aryan and Soren</span></h1>
             <span class="stretch"></span>
             <ul class="nav-items">
-                <li class="item active"><a href="/">Home</a></li>
+                <li class="item"><a href="/">Home</a></li>
                 <li class="item"><a href="/login.html">Login</a></li>
-                <li class="item"><a href="/admin.html">Admin</a></li>
+                <li class="item active"><a href="/admin.html">Admin</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="container">
+
+        <div id="course-select">
+            <button class="btn course active">Am. Lit Group 1</button>
+            <button class="btn course">Am. Lit Group 2</button>
+            <button class="btn course">Comp. Lit Group 1</button>
+            <button class="btn course">Comp. Lit Group 2</button>
+        </div>
+
         <template id="task">
             <div class="task">
                 <label class="task-label">
@@ -52,15 +60,15 @@
             </div>
         </template>
 
-        <div id="tasks"></div>
+        <div id="tasks">
+
+        </div>
 
         <button type="button" class="btn" id="new-task">Create Task</button>
     </section>
 
-
-    <!-- <script src="/js/login.js"></script> -->
     <script src="/js/tasks.js"></script>
-    <script src="/js/stdnt.js"></script>
+    <script src="/js/admin.js"></script>
 </body>
 
 </html>
